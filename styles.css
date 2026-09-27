@@ -1,0 +1,53 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.7;
+  --accent: #087f73;
+  --surface: color-mix(in srgb, Canvas 94%, var(--accent));
+  --border: color-mix(in srgb, CanvasText 18%, Canvas);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: CanvasText;
+  background: Canvas;
+}
+
+header, main, footer {
+  width: min(760px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+header { padding: 56px 0 24px; }
+main { padding-bottom: 56px; }
+footer {
+  padding: 24px 0 48px;
+  border-top: 1px solid var(--border);
+  color: color-mix(in srgb, CanvasText 68%, Canvas);
+  font-size: 0.9rem;
+}
+
+h1, h2 { line-height: 1.35; }
+h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3.4rem); }
+h2 { margin-top: 2.2rem; font-size: 1.35rem; }
+p, li { max-width: 68ch; }
+a { color: var(--accent); text-underline-offset: 0.2em; }
+
+.lead { font-size: 1.15rem; }
+.card {
+  padding: 20px;
+  margin: 24px 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+.nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.eyebrow { color: var(--accent); font-weight: 700; }
+.notice { border-left: 4px solid #b7791f; padding-left: 16px; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --accent: #5eead4; }
+}
+
